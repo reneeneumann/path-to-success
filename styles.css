@@ -54,6 +54,257 @@ table {
 
 /* -------------------- ROOT VARIABLES --------------------------------------- */
 :root {
-    font-family: "Kavoon", "Inter", serif;
+    font-family: "Inter", serif;
     font-size: 1.25em;
+    --teal:#4CA7C0;
+    --purple:#484FB7;
+    --lavender:#6B8FE7;
+    --yellow:#E9BB57;
+    --pink:#D9526F;
+    --dark-gray:#1E1E1E;
+    --white:#ffffff;
+}
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+@media screen and (min-width: 428px) {
+    body {
+        background-color:#484FB7;
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        background-color: #6B8FE7;
+        font-family: "Kavoon";
+        color:#ffffff;
+        font-size: 50px;
+        text-align: center;
+        padding: 55px 35px 35px 35px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+
+    header p {
+        background-color: #D9526F;
+        color: #ffffff;
+        font-style: italic;
+        text-align: center;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        padding: 20px 10px 5px 10px;
+        font-size: small;
+        margin: -5px 15px 0 15px;
+        position: relative;
+        z-index: -1;
+    }
+
+    .largemsg, nav h2, #subitem {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    header li {
+        background-color: #E9BB57;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: bold;
+        font-size: x-large;
+        padding: 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: fit-content;
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    h2 {
+        font-family: "Kavoon";
+        color: #ffffff;
+        padding: 40px 0 5px 10px;
+        font-size: xx-large;
+    }
+
+    h3 {
+        color: #E9BB57;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+
+    .ourservices > section {
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 10px;
+        margin: 15px 20px 15px 20px;
+    }
+
+    h4 {
+        color:#484FB7;
+        font-weight: bold;
+        padding: 5px 5px 5px 10px;
+    }
+
+    h4 + p {
+        font-size: medium;
+        padding: 5px 10px 5px 10px;
+        line-height: 25px;
+    }
+
+    .whychooseus {
+        background-color: #D9526F;
+        padding: 20px;
+    }
+
+    .whychooseus h2 {
+        padding: 0 0 20px 0;
+    }
+
+    .whychooseus ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        padding: 0;
+    }
+
+    .whychooseus li {
+        border-radius: 10px;
+        padding: 30px 20px 30px 20px;
+        text-align: center;
+        font-weight: bold;
+        max-width: 250px;
+    }
+
+    .approach {
+        background-color: #4CA7C0;
+    }
+
+    .results {
+        background-color: #6B8FE7;
+    }
+
+    .environment {
+        background-color: #E9BB57;
+    }
+
+    .options {
+        background-color: #ffffff;
+    }
+
+    .prices {
+        padding-bottom: 10px;
+    }
+
+    .prices h2 {
+        padding-top: 10px;
+    }
+
+    .prices h4 {
+        color: #E9BB57;
+        font-size: x-large;
+    }
+
+    table {
+        display: table;
+        margin: auto;
+        background-color: #E9BB57;
+        font-size: 15px;
+    }
+
+    table td, table th {
+        padding: 5px;
+        padding: 15px;
+    }
+
+    table th {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    table td {
+        background-color: #ffffff;  
+        border: 2px solid #E9BB57;
+    }
+
+    .takestep {
+        background-color: #D9526F;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .takestep h2 {
+        padding: 10px 15px 10px 15px;
+    }
+
+    .takestep p {
+        color:#ffffff;
+        padding: 0 15px 10px 15px;
+        line-height: 30px;
+        font-size: 18px;
+    }
+
+    .takestep a {
+        background-color: #ffffff;
+        border-radius: 15px;
+        text-align: center;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-bottom: 5px;
+        padding: 25px 40px 25px 40px;
+        color:#1E1E1E;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 18px;
+        text-decoration: none;
+        box-shadow: 6px 6px 8px rgba(0, 0, 0, 5);
+    }
+
+    footer {
+        background-color: #6B8FE7;
+        padding: 40px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: small;
+        color: #ffffff;
+    }
+
+    footer a {
+        color: #ffffff;
+    }
+
+}
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width: 768px) {
+    .largemsg {
+        display: block;
+        padding: 10px;
+    }
+
+    .smallmsg {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 1024px) {
+    #subitem {
+        display: block;
+    }
+
+    #mainitem {
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width: 1280px) {
+
 }
