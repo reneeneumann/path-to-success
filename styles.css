@@ -97,7 +97,7 @@ table {
         z-index: -1;
     }
 
-    .largemsg, nav h2, #subitem {
+    .largemsg, nav h2, #subitem1, #subitem2, #subitem3, #subitem4 {
         display: none;
         padding: 0;
         margin: 0;
@@ -280,7 +280,10 @@ table {
 @media screen and (min-width: 768px) {
     .largemsg {
         display: block;
-        padding: 10px;
+        padding: 30px 20px 5px 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 20px;
     }
 
     .smallmsg {
@@ -289,12 +292,86 @@ table {
         margin: 0;
     }
 
+    h1 {
+        font-size: 70px;
+    }
+
+    header p {
+        position: relative;
+        top: -15px;
+    }
+
+    h2 {
+        font-size: 40px;
+        padding-left: 15px;
+    }
+
+    h3 {
+        font-size: 30px;
+        padding: 15px;
+    }
+
+    .ourservices {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ourservices section {
+        padding: 20px 15px 20px 15px;
+    }
+
+    h3, .ourservices section:nth-child(5) {
+        grid-column: span 2;
+    }
+
+    .ourservices section:nth-child(10) {
+        grid-column: span 2;
+    }
+
+    .ourservices section:nth-child(12) {
+        grid-column: span 2;
+    }
+
+    .whychooseus ul {
+        display: flex;
+    }
+
+    .prices {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 10px;
+    }
+
+    .prices h2 {
+        grid-column: span 2;
+        padding-bottom: 15px;
+        padding-left: 10px;
+    }
+
+    .takestep {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .takestep > section {
+        align-items: flex-start;
+    }
+
+    .takestep p, .takestep a {
+        display: inline-block;
+        width: 40%;
+        margin: 0;
+        vertical-align: top;
+    }
+
 }
 
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
 @media screen and (min-width: 1024px) {
     #subitem {
-        display: block;
+        display: flex;
+        flex: 1;
     }
 
     #mainitem {
