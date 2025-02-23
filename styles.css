@@ -97,13 +97,18 @@ table {
         z-index: -1;
     }
 
-    .largemsg, nav h2, #subitem1, #subitem2, #subitem3, #subitem4 {
+    .largemsg, nav h2 {
         display: none;
         padding: 0;
         margin: 0;
     }
 
     header li {
+        display: none;
+    }
+
+    .menu {
+        display: block;
         background-color: #E9BB57;
         text-transform: uppercase;
         font-style: italic;
@@ -225,7 +230,7 @@ table {
         border: 2px solid #E9BB57;
     }
 
-    .takestep {
+    .takestep, .takestep figure {
         background-color: #D9526F;
         display: flex;
         flex-direction: column;
@@ -247,8 +252,8 @@ table {
         background-color: #ffffff;
         border-radius: 15px;
         text-align: center;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 50px;
+        margin-right: 50px;
         margin-bottom: 5px;
         padding: 25px 40px 25px 40px;
         color:#1E1E1E;
@@ -348,13 +353,14 @@ table {
         padding-left: 10px;
     }
 
-    .takestep {
+    .takestep, .takestep figure {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
-    .takestep > section {
+    .takestep figure {
+        display: inline-block;
         align-items: flex-start;
     }
 
@@ -364,24 +370,132 @@ table {
         margin: 0;
         vertical-align: top;
     }
-
 }
 
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
 @media screen and (min-width: 1024px) {
-    #subitem {
-        display: flex;
-        flex: 1;
+    nav {
+        background-color: #E9BB57;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        position: fixed;
+        top: 0;
+        right: 0;
     }
 
-    #mainitem {
+    nav a {
+        color: #1E1E1E;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 10px 20px 10px 20px;
+    }
+
+    nav a:hover {
+        color:#ffffff;
+    }
+    
+    nav li {
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .menu {
         display: none;
         padding: 0;
         margin: 0;
     }
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    .ourservices {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .ourservices h2 {
+        width: 100%;
+    }
+
+    .ourservices h3 {
+        display: flex;
+        width: 100%;
+    }
+
+    #first, #second, #third, #fourth {
+        font-size: 100%;
+    }
+
+    .ourservices section {
+        flex: 1 1 25%;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    #personal-development, #career-coaching, #relationship-coaching, #supportive-community, #focused-sessions, #interactive-learning, #flexible-learning {
+        max-width: 25%;
+    }
+
+    .whychooseus ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .whychooseus li {
+        margin: 0;
+    }
+
+    .prices {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .prices h2 {
+        grid-column: span 4;
+    }
+
+    .prices h4 {
+        font-size: 100%;
+    }
+
+    .takestep figure {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .takestep p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 30px;
+        width: 50%;
+    }
+
+    .takestep a {
+        margin: auto;
+        margin-bottom: 70px;
+        padding: 20px;
+        width: 30%;
+        min-width: 200px;
+        align-items: center;
+    }
+
 }
 
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 @media screen and (min-width: 1280px) {
+    body {
+        margin: 0 100px 0 100px;
+    }
 
 }
